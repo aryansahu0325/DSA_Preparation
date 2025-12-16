@@ -17,6 +17,7 @@ public class length {
         head.next.next.next = new Node(2);
         head.next.next.next.next = new Node(2);
         System.out.println("Count of nodes are:" + countNodes(head));
+        System.out.println("Count of nodes are:" + countNodesrec(head));
     }
 
     public static int countNodes(Node head) {
@@ -25,6 +26,12 @@ public class length {
             count++;
         }
         return count;
+    }
+    public static int countNodesrec(Node head) {
+        if(head==null) {
+            return 0;
+        }
+        return 1+ countNodesrec(head.next);
     }
 }
 
