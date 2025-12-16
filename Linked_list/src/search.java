@@ -19,10 +19,22 @@ public class search {
             head.next.next=new Node(9);
             head.next.next.next=new Node(1);
             head.next.next.next.next=new Node(3);
-            int idx=0;
-            searchNodes(head,k,idx);
+            int idx=1;
+            searchNodesrec(head,k,idx);
+            searchNodesIT(head,k,idx);
         }
-        public static void searchNodes(Node head,int k,int idx)
+        public static void searchNodesIT(Node head,int k,int idx)
+        {
+            for(Node temp=head;temp!=null;temp=temp.next){
+                if(temp.data==k)
+                {
+                    System.out.println("Element found at position:"+idx);
+                }
+                idx++;
+            }
+            System.out.println("Elements not found");
+        }
+        public static void searchNodesrec(Node head,int k,int idx)
         {
             if(head==null){
                 System.out.println("Element not found");
@@ -30,10 +42,10 @@ public class search {
             }
             if(head.data==k)
             {
-                System.out.println("Element found at index"+idx);
+                System.out.println("Element found at position:"+idx);
                 return;
             }
-            searchNodes(head.next,k,idx+1);
+            searchNodesrec(head.next,k,idx+1);
         }
     }
 
