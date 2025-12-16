@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 
 public class print {
     public static class Node
@@ -17,6 +18,7 @@ public class print {
         head.next.next.next = new Node(2);
         head.next.next.next.next = new Node(2);
         printNodes(head);
+        printNodes1(head);
     }
 
     public static void printNodes(Node head) {
@@ -24,6 +26,16 @@ public class print {
             System.out.print(curr.data+"->");
         }
         System.out.println("null");
+
+    }
+    public static void printNodes1(Node head) {
+        if (head == null) {
+            return;
+        }
+        System.out.print(head.data);
+        if (head.next != null)
+            System.out.print("->");
+        printNodes1(head.next);
     }
 }
 
