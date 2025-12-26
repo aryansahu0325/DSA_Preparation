@@ -37,16 +37,11 @@ public class delete_end {
     {
         Node temp=head;
         Node prev=null;
-        if(p==1)
-        {
-            head=temp.next;
-            return head;
-        }
-        for(int i=1;i<p;i++){
+        while(temp.next!=null){
             prev=temp;
             temp=temp.next;
         }
-        prev.next=temp.next;
+        prev.next=null;
         return head;
     }
 }
