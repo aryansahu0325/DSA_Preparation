@@ -37,7 +37,7 @@ public class insert
             if(head.next!=null)
                 System.out.print("->");
             print_list(head.next);
-
+            System.out.println();
         }
         public static Node insert_node_begin(Node head, int n)
         {
