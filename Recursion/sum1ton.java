@@ -2,7 +2,7 @@ import java.util.*;
 public class sum1ton {
     public static void main(String[] args){
         int n=5;
-        sum(n);
+        System.out.println(sum(n));
     }
     public static int sum(int n)
     {
