@@ -58,25 +58,25 @@ public class nthNode
             {
                 return head.data;
             }
-            return getNStartrec(head.next.n-1);
+            return getNStartrec(head.next,n-1);
         }
         public static void getNend(Node head, int n)
         {
             Node temp = head;
-            int len=0;
+            int len = 0;
             // Count the number of nodes in Linked List
             while (temp != null) {
                 temp = temp.next;
                 len++;
             }
-            if(head==null){
+            if (head == null) {
                 return;
             }
-            temp=head;
-            for(int i=1;i<len-n+1;i++)
-            {
-                temp=temp.next;
+            temp = head;
+            for (int i = 1; i < len - n + 1; i++) {
+                temp = temp.next;
             }
             System.out.println(temp.data);
+        }
     }
-}
+
