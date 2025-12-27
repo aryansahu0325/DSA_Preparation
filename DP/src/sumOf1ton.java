@@ -15,7 +15,7 @@ public class sumOf1ton
             return sum;
         }
         sum+=n;
-        return n+sum1ton(n-1);
+        return sum+sum1ton(n-1);
 
     }
 }
