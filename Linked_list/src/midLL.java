@@ -21,6 +21,7 @@ public class midLL {
         }
         print(head);
         System.out.println("Middle of LL: "+findmid(head));
+        System.out.println("Middle of LL: "+findmidl(head));
     }
     public static void insert_nodes(int data)
     {
@@ -51,4 +52,21 @@ public class midLL {
         return slow.data;
 
     }
+    public static int findmidl(Node head)
+    {
+        Node temp=head;
+        int l=0;
+        while(temp!=null){
+            l++;
+            temp=temp.next;
+        }
+        int mid=l/2;
+        while(mid>0){
+            head=head.next;
+            mid--;
+        }
+        return head.data;
+    }
+
+
 }
