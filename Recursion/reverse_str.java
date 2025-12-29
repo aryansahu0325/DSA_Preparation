@@ -6,6 +6,7 @@ public class reverse_str {
             System.out.println(without_swap(st));
             with_swap(arr,0,st.length()-1);
             System.out.println(arr);
+            reversestitr(st);
     }
     public static String without_swap(String st)
     {
@@ -24,5 +25,13 @@ public class reverse_str {
         arr[right]=temp;
 
         with_swap(arr, left + 1, right - 1);
+    }
+    public static void reversestitr(String st) {
+        String st1="";
+        for(int i=0;i<st.length();i++){
+            char ch=st.charAt(i);
+            st1=ch+st1;
+        }
+        System.out.println(st1);
     }
 }
