@@ -26,16 +26,14 @@ public class insert_pos {
         insertpos(head,n,p);
         print(head);
     }
-    public static Node insertpos(Node head,int n,int p)
-    {
-        Node curr=head;
-        for(int i=1;i<p-1;i++)
-        {
-            curr=curr;
+    public static Node insertpos(Node head,int n,int p) {
+        Node curr = head;
+        for (int i = 1; i < p - 1; i++) {
+            Node newNode = new Node(n);
+            newNode.next = curr.next;
+            curr.next = newNode;
+
         }
-        Node newNode=new Node(n);
-        newNode.next=curr.next;
-        curr.next=newNode;
         return head;
     }
     public static void print(Node head)
@@ -51,3 +49,4 @@ public class insert_pos {
         }
     }
 }
+
