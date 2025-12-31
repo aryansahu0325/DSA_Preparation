@@ -31,7 +31,7 @@ public class insert_pos {
         Node curr=head;
         for(int i=1;i<p-1;i++)
         {
-            curr=curr.next;
+            curr=curr;
         }
         Node newNode=new Node(n);
         newNode.next=curr.next;
