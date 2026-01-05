@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DP/DP.iml" filepath="$PROJECT_DIR$/DP/DP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Daily_Task/Daily_Task.iml" filepath="$PROJECT_DIR$/Daily_Task/Daily_Task.iml" />
       <module fileurl="file://$PROJECT_DIR$/Linked_list/Linked_list.iml" filepath="$PROJECT_DIR$/Linked_list/Linked_list.iml" />
       <module fileurl="file://$PROJECT_DIR$/Placement Training.iml" filepath="$PROJECT_DIR$/Placement Training.iml" />
       <module fileurl="file://$PROJECT_DIR$/winter_break/winter_break.iml" filepath="$PROJECT_DIR$/winter_break/winter_break.iml" />
