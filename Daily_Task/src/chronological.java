@@ -70,8 +70,7 @@ public class chronological {
             System.out.print(arr[i] + (i == n - 1 ? "" : " "));
         }
         System.out.println();
-
-        System.out.println("Length of the Longest Increasing Subsequence: " + findLISLength(arr));
-        sc.close();
+        int ans=findLISLength(arr);
+        System.out.println("Length of the Longest Increasing Subsequence: " +ans);
     }
 }
