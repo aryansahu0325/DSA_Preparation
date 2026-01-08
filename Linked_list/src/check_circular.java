@@ -24,6 +24,7 @@ public class check_circular {
         }
         print(head);
         System.out.println(check(head));
+        System.out.println(checksf(head));
     }
 
     public static void insert_nodes(int data) {
@@ -46,17 +47,30 @@ public class check_circular {
     }
 
     public static boolean check(Node head) {
-        int count=0;
         if(head==null){
             return true;
         }
         Node temp=head;
         while(head!=null && head.next!=temp){
             head=head.next;
-
         }
         if(head==null||head.next==null)
             return false;
         return true;
+    }
+    public static boolean checksf(Node head) {
+        if(head==null){
+            return true;
+        }
+        Node slow=head;
+        Node fast=head.next;
+        while(fast!=null&&fast.next!=null){
+            if(slow==fast){
+                return true;
+            }
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return false;
     }
 }
