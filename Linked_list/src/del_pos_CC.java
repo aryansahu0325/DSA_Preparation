@@ -1,5 +1,5 @@
 import java.util.*;
-public class del_begin_CC                //TC:O(n) and SC:O(n)
+public class del_pos_CC                //TC:O(n) and SC:O(n)
 {
     public static class Node
     {
@@ -24,9 +24,11 @@ public class del_begin_CC                //TC:O(n) and SC:O(n)
             insert_data(data);
         }
         if (tail != null) tail.next = head;
+        System.out.println("Enter the position");
+        int pos=sc.nextInt();
         System.out.println("Original List");
         print_list(head);
-        head=del_begin(head);
+        head=del_pos(head,pos);
         System.out.println("Updated List");
         print_list(head);
     }
@@ -48,16 +50,21 @@ public class del_begin_CC                //TC:O(n) and SC:O(n)
         tail.next=newNode;
         tail=newNode;
     }
-    public static Node del_begin(Node head){
-        if(head==null||head.next==null){
+    public static Node del_pos(Node head, int pos){
+        if(head==null){
             return null;
         }
-        Node temp=head;
-        while(temp.next!=head){
-            temp=temp.next;
+        if(pos==1){
+            head=null;
         }
-        head=head.next;
-        temp.next=head;
+        Node prev=null;
+        Node curr=head;
+        for(int i=1;i<=pos-1;i++)
+        {
+            prev=curr;
+            curr=prev.next;
+        }
+        prev.next=curr.next;
         return head;
     }
 }
