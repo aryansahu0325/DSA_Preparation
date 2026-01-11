@@ -1,5 +1,5 @@
 import java.util.*;
-public class del_beginDD                //TC:O(n) and SC:O(n)
+public class del_after_addDD                //TC:O(n) and SC:O(n)
 {
     public static class Node
     {
@@ -29,13 +29,14 @@ public class del_beginDD                //TC:O(n) and SC:O(n)
         print_list(head);
         System.out.println("Enter data to inserted at first node");
         int data=sc.nextInt();
-        head=add_begin(head,data);
+        System.out.println("Enter the node data after which data is to be added or deleted");
+        int key=sc.nextInt();
+        head=add_after(head,data,key);
         System.out.println("Updated List after adding");
         print_list(head);
-        head=del_begin(head);
+        head=del_after(head,key);
         System.out.println("Updated List after deleting");
         print_list(head);
-
     }
     public static void print_list(Node head) {
         Node temp=head;
@@ -44,6 +45,7 @@ public class del_beginDD                //TC:O(n) and SC:O(n)
             if (temp.next != null)
                 System.out.print("->");
         }
+        System.out.println();
     }
     public static void insert_data(int data){
         Node newNode=new Node(data);
@@ -52,24 +54,44 @@ public class del_beginDD                //TC:O(n) and SC:O(n)
             return;
         }
         tail.next=newNode;
+        newNode.prev=tail;
         tail=newNode;
     }
-    public static Node add_begin(Node head,int data){
+    public static Node add_after(Node head,int data,int key){
         Node newNode=new Node(data);
         if(head==null){
+
             return newNode ;
         }
-        newNode.next=head;
-        head.prev=newNode;
-        head=newNode;
+        Node temp=head;
+        while(temp!=null){
+            if(temp.data==key) {
+                break;
+            }
+            temp=temp.next;
+        }
+        newNode.next=temp.next;
+        newNode.prev=temp;
+        temp.next=newNode;
         return head;
     }
-    public static Node del_begin(Node head){
+    public static Node del_after(Node head,int key) {
         if(head==null||head.next==null){
             return null ;
         }
-        head=head.next;
-        head.prev=null;
+        Node temp=head;
+        while(temp!=null){
+            if(temp.data==key) {
+                break;
+            }
+            temp=temp.next;
+        }
+        if(temp.next==null){
+            return head;
+        }
+        Node nodeDel=temp.next;
+        temp.next=nodeDel.next;
+        nodeDel.next.prev=temp;
         return head;
     }
 }
