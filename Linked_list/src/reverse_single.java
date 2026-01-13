@@ -26,6 +26,10 @@ public class reverse_single {
             System.out.println("Reversed List");
             reverse();
             print_list();
+            reverse_stack(head);
+            print_list();
+            head=reverse_rec(head);
+            print_list();
         }
         public static void insert_data(int data){
             Node newNode=new Node(data);
@@ -55,6 +59,28 @@ public class reverse_single {
             }
             head=prev;
         }
-
+        public static Node reverse_stack(Node head){
+            Stack<Integer> st=new Stack<>();
+            Node temp=head;
+            while(temp!=null){
+                st.push(temp.data);
+                temp=temp.next;
+            }
+            temp=head;
+            while(temp!=null){
+                temp.data=st.pop();
+                temp=temp.next;
+            }
+            return head;
+        }
+        public static Node reverse_rec(Node head){
+            if(head==null||head.next==null){
+                return head;
+            }
+            Node newHead=reverse_rec(head.next);
+            head.next.next=head;
+            head.next=null;
+            return newHead;
+        }
     }
 
