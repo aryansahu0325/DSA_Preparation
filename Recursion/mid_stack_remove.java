@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class mid_stack_remove
+public class  mid_stack_remove
 {
     public static void main(String[] args)
     {

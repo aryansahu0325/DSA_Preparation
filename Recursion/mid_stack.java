@@ -25,7 +25,5 @@ public class mid_stack
         }
         list.remove(mid);
         System.out.println(list);
-
-
     }
 }
