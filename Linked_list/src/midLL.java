@@ -67,6 +67,4 @@ public class midLL {
         }
         return head.data;
     }
-
-
 }
