@@ -3,10 +3,10 @@ public class sunsequence_array_sum
 {
     public static void main(String args[])
     {
-        int nums[]={1,1,2};
+        int nums[]={10,1,2,7,6,1,5};
         int sum=0;
         int idx=0;
-        int target=2;
+        int target=8;
         List<Integer> curr=new ArrayList<>();
         printsub(idx,nums,sum,curr,target);
     }
