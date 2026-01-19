@@ -13,7 +13,7 @@ public class Subsequence_print
     public static void printsub(int idx, String st, String curr)
     {
         if (idx == st.length()) {
-            System.out.println(curr);
+            System.out.println("["+curr+"]");
             return;
         }
         //take condition
