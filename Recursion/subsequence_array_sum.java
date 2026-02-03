@@ -1,5 +1,5 @@
 import java.util.*;
-public class sunsequence_array_sum
+public class subsequence_array_sum
 {
     public static void main(String args[])
     {
