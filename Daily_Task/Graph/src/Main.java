@@ -13,3 +13,7 @@ public class Main {
         }
     }
 }
+/*Applications
+Map
+Neural Network
+ */
