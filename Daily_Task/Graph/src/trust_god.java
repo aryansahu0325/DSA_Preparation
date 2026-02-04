@@ -1,10 +1,9 @@
 import java.util.*;
-public class graph_mat {
+public class trust_god {
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the no. of vertices");
+        System.out.println("Enter the no of rows and cols");
         int V=sc.nextInt();
-        System.out.println("Enter the no. edges");
         int edge=sc.nextInt();
         int mat[][]=new int[V+1][V+1];
         System.out.println("Enter the vertices");
